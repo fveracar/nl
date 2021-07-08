@@ -96,8 +96,6 @@ else:
 
 st.write(texto)
 
-st.stop()
-
 #obtenemos las entidades del texto
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = uploaded_file.name
 client = language_v1.LanguageServiceClient()
