@@ -97,7 +97,7 @@ else:
 st.write(texto)
 
 #obtenemos las entidades del texto
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = uploaded_file.name
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = uploaded_file
 client = language_v1.LanguageServiceClient()
 
 # Available types: PLAIN_TEXT, HTML
