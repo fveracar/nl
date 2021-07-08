@@ -11,8 +11,11 @@ from matplotlib.pyplot import figure
 
 import streamlit as st
 
-uploaded_file = st.file_uploader('sube tu .json')
+uploaded_file = st.file_uploader('sube tu .json', type=None, accept_multiple_files=False)
 st.write("filename:", uploaded_file.name)
+
+if uploaded_file.name == '':
+ st.stop()
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = uploaded_file.name
 
