@@ -4,5 +4,4 @@ requests == 2.23.0
 requests-HTML == 0.10.0
 pandas == 1.1.5
 regex == 2019.12.20
-urlparse4 == 0.1
 pyngrok == 5.0.5
