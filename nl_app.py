@@ -15,8 +15,13 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "cobalt-maxim-205411-58f6ddbc261a
 
 import requests
 from requests_html import HTMLSession
+
+url_input = st.text_input('url para obtener Entidades')
  
-url = "https://sevilla.abc.es/andalucia/sevi-contagios-disparados-marcan-inicio-quinta-covid-andalucia-202107081224_noticia.html" #@param {type:"string"}
+#url = "https://sevilla.abc.es/andalucia/sevi-contagios-disparados-marcan-inicio-quinta-covid-andalucia-202107081224_noticia.html" #@param {type:"string"}
+
+url = url_input
+
 try:
     session = HTMLSession()
     response = session.get(url)
