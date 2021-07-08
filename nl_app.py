@@ -11,7 +11,7 @@ from matplotlib.pyplot import figure
 
 import streamlit as st
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "https://drive.google.com/file/d/1ElTTm-PLgMWHDivMBSEsEiKZ5evk9YN3/view?usp=sharing"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "https://drive.google.com/file/d/1ElTTm-PLgMWHDivMBSEsEiKZ5evk9YN3/"
 
 import requests
 from requests_html import HTMLSession
