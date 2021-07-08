@@ -14,7 +14,7 @@ import streamlit as st
 uploaded_file = st.file_uploader('sube tu .json')
 st.write("filename:", uploaded_file.name)
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "https://drive.google.com/file/d/1ElTTm-PLgMWHDivMBSEsEiKZ5evk9YN3/"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "cobalt-maxim-205411-58f6ddbc261a.json"
 
 import requests
 from requests_html import HTMLSession
