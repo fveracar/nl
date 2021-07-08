@@ -17,6 +17,8 @@ import requests
 from requests_html import HTMLSession
 
 url_input = st.text_input('url para obtener Entidades')
+
+st.stop()
  
 #url = "https://sevilla.abc.es/andalucia/sevi-contagios-disparados-marcan-inicio-quinta-covid-andalucia-202107081224_noticia.html" #@param {type:"string"}
 
