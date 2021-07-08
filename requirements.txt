@@ -1,8 +1,8 @@
-!pip install streamlit==0.75.0
-!pip install nltk
-!pip install requests
-!pip install requests-HTML
-!pip install pandas
-!pip install regex
-!pip install urlparse4
-!pip install pyngrok
+streamlit==0.75.0
+pip install nltk
+pip install requests
+pip install requests-HTML
+pip install pandas
+pip install regex
+pip install urlparse4
+pip install pyngrok
