@@ -5,3 +5,4 @@ requests-HTML == 0.10.0
 pandas == 1.1.5
 regex == 2019.12.20
 pyngrok == 5.0.5
+google-cloud-language==1.2.0
