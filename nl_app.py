@@ -16,7 +16,7 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "cobalt-maxim-205411-58f6ddbc261a
 import requests
 from requests_html import HTMLSession
  
-url = "https://www.abc.es/internacional/abci-putin-declara-guerra-champan-frances-202107080218_noticia.html" #@param {type:"string"}
+url = "https://sevilla.abc.es/andalucia/sevi-contagios-disparados-marcan-inicio-quinta-covid-andalucia-202107081224_noticia.html" #@param {type:"string"}
 try:
     session = HTMLSession()
     response = session.get(url)
