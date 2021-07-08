@@ -11,8 +11,7 @@ from matplotlib.pyplot import figure
 
 import streamlit as st
 
-uploaded_file = st.file_uploader('sube tu .json', type=None, accept_multiple_files=False)
-st.write("filename:", uploaded_file.name)
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/content/drive/MyDrive/SEO/Análisis de entidades/cobalt-maxim-205411-58f6ddbc261a.json"
 
 import requests
 from requests_html import HTMLSession
@@ -97,7 +96,6 @@ else:
 st.write(texto)
 
 #obtenemos las entidades del texto
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = uploaded_file
 client = language_v1.LanguageServiceClient()
 
 # Available types: PLAIN_TEXT, HTML
