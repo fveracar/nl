@@ -14,11 +14,6 @@ import streamlit as st
 uploaded_file = st.file_uploader('sube tu .json', type=None, accept_multiple_files=False)
 st.write("filename:", uploaded_file.name)
 
-if uploaded_file.name == '':
- st.stop()
-
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = uploaded_file.name
-
 import requests
 from requests_html import HTMLSession
  
@@ -102,7 +97,7 @@ else:
 st.write(texto)
 
 #obtenemos las entidades del texto
-
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = uploaded_file.name
 client = language_v1.LanguageServiceClient()
 
 # Available types: PLAIN_TEXT, HTML
