@@ -1,0 +1,8 @@
+!pip install nltk
+!pip install requests
+!pip install requests-HTML
+!pip install pandas
+!pip install regex
+!pip install urlparse4
+!pip install streamlit
+!pip install pyngrok
