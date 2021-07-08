@@ -101,6 +101,7 @@ elif dominio_hoy in url or dominio_rioja in url or dominio_correo in url or domi
 else:
   st.write('El dominio de la URL: ' + url + ' \nno se encuentra entre nuestros dominios objetivo o la competencia directa, y por lo tanto, no se puede extraer el texto. \nSi deseas incluir este dominio para su análisis, por favor, ponte en contacto con fvera@vocento.com')
 
+st.header('Texto noticia')
 st.write(texto)
 
 #obtenemos las entidades del texto
@@ -117,6 +118,8 @@ document = {"content": texto, "type": type_, "language": language}
 encoding_type = enums.EncodingType.UTF8
 
 response = client.analyze_entities(document, encoding_type=encoding_type)
+
+st.header('Entidades noticia')
 
 # Loop through entitites returned from the API
 for entity in response.entities:
@@ -144,7 +147,8 @@ for entity in response.entities:
     st.write('\n')
 
 ####################################### The text to analyze setiment
-
+st.header('Sentimiento')
+ 
 document = types.Document(
     content=texto,
     type=enums.Document.Type.PLAIN_TEXT)
@@ -185,6 +189,7 @@ plt.title("Tipo de Sentimiento")
 plt.show()
 
 #title Ejecutar para calcular la magnitud del sentimiento { vertical-output: true }
+st.header('Magnitud Sentimiento')
 
 if smag >= 0 and smag < 1:
   sent_m_label = "Sin Emoción"
