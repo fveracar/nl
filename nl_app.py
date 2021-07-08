@@ -11,7 +11,7 @@ from matplotlib.pyplot import figure
 
 import streamlit as st
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "https://share.streamlit.io/fveracar/nl/main/cobalt-maxim-205411-58f6ddbc261a.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "cobalt-maxim-205411-58f6ddbc261a.json"
 
 import requests
 from requests_html import HTMLSession
