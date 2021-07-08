@@ -97,8 +97,19 @@ else:
 st.write(texto)
 
 #obtenemos las entidades del texto
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = uploaded_file.name
-client = language_v1.LanguageServiceClient()
+
+with tempfile.NamedTemporaryFile(mode='w', delete=False) as fp:
+    fp.write(uploaded_file.getvalue())
+try:
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = fp.name
+    st.write("found", fp.name)
+    with open(fp.name) as a:
+        st.write(a.read())
+        #client = language.LanguageServiceClient()
+        client = language_v1.LanguageServiceClient()
+
+#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = uploaded_file.name
+#client = language_v1.LanguageServiceClient()
 
 # Available types: PLAIN_TEXT, HTML
 type_ = enums.Document.Type.PLAIN_TEXT
