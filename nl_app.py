@@ -15,7 +15,13 @@ st.set_page_config(
     page_title='Entidades | Vocento',
 )
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "cobalt-maxim-205411-58f6ddbc261a.json"
+from os import path #####
+json_file = st.file_uploader('subir archivo .json')
+st.write(path.abspath(json_file.name))
+
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = path.abspath(json_file.name)
+
+#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "cobalt-maxim-205411-58f6ddbc261a.json"
 
 import requests
 from requests_html import HTMLSession
