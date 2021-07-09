@@ -21,7 +21,7 @@ st.write(path.abspath(json_file.name))
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = path.abspath(json_file.name)
 
-#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "cobalt-maxim-205411-58f6ddbc261a.json"
+#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = ""
 
 import requests
 from requests_html import HTMLSession
