@@ -11,6 +11,10 @@ from matplotlib.pyplot import figure
 
 import streamlit as st
 
+st.set_page_config(
+    page_title='Monitorización en Directo | Vocento',
+)
+
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "cobalt-maxim-205411-58f6ddbc261a.json"
 
 import requests
