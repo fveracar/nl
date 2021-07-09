@@ -12,7 +12,7 @@ from matplotlib.pyplot import figure
 import streamlit as st
 
 st.set_page_config(
-    page_title='Monitorización en Directo | Vocento',
+    page_title='Entidades | Vocento',
 )
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "cobalt-maxim-205411-58f6ddbc261a.json"
