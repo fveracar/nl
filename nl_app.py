@@ -22,6 +22,8 @@ import json
 #creamos un dict con el contenido de las credenciales de json
 contenido_json = st.secrets["json"]
 
+st.write(contenido_json)
+
 #convertimos el dict en un JSON
 uploaded_file = json.dumps(contenido_json)
 
