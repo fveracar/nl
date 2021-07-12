@@ -1,1 +1,2 @@
-$ touch .gitignore
+# Ignora todos los archivos de texto
+*.txt
