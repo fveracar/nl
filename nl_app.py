@@ -19,7 +19,7 @@ from os import path #####
 json_file = st.file_uploader('subir archivo .json')
 st.write(path.abspath(json_file.name))
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'https://share.streamlit.io/fveracar/app/nl/cobalt-maxim-205411-78864d7f7eae.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/app/nl/cobalt-maxim-205411-78864d7f7eae.json'
 
 #os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = ""
 
