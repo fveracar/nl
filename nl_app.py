@@ -20,7 +20,7 @@ import tempfile
 import json
 
 #creamos un dict con el contenido de las credenciales de json
-contenido_json = st.secrets['contenido_json']
+contenido_json = st.secrets["contenido_json"]
 
 #convertimos el dict en un JSON
 uploaded_file = json.dumps(contenido_json)
