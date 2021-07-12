@@ -20,6 +20,7 @@ import tempfile
 import json
 
 prueba = st.secrets["test"]
+st.write('hola')
 st.write(prueba)
 
 #creamos un dict con el contenido de las credenciales de json
