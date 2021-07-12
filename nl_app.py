@@ -20,10 +20,10 @@ import tempfile
 import json
 
 #creamos un dict con el contenido de las credenciales de json
-contenido_json = st.secrets["file_json"]
+#contenido_json = st.secrets["file_json"]
 
 #convertimos el dict en un JSON
-uploaded_file = json.dumps(contenido_json)
+uploaded_file = json.dumps(st.secrets["file_json"])
 
 #guardamos el JSON en un archivo temporal para poder llamar al path donde se encuentra el archivo JSON en GOOGLE_APPLICATION_CREDENTIALS
 with tempfile.NamedTemporaryFile(mode='w', delete=False) as fp:
