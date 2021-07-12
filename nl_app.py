@@ -15,13 +15,20 @@ st.set_page_config(
     page_title='Entidades | Vocento',
 )
 
-from os import path #####
-json_file = st.file_uploader('subir archivo .json')
-st.write(path.abspath(json_file.name))
+import tempfile
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/app/nl/cobalt-maxim-205411-78864d7f7eae.json'
+uploaded_file = st.file_uploader("subir archivo .json", type="json")
 
-#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = ""
+with tempfile.NamedTemporaryFile(mode='wb', delete=False) as fp:
+  fp.write(uploaded_file.getvalue())
+try:
+  os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = fp.name
+  st.write('Found', fp.name)
+  with open(fp.name) as a:
+    st.write(a.read())
+    client = language_v1.LanguageServiceClient()
+finally:
+  os.unlink(fp.name)
 
 import requests
 from requests_html import HTMLSession
@@ -115,7 +122,7 @@ st.header('Texto noticia')
 st.write(texto)
 
 #obtenemos las entidades del texto
-client = language_v1.LanguageServiceClient()
+#client = language_v1.LanguageServiceClient()
 
 # Available types: PLAIN_TEXT, HTML
 type_ = enums.Document.Type.PLAIN_TEXT
