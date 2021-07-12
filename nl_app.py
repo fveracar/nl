@@ -22,7 +22,7 @@ import json
 #creamos un dict con el contenido de las credenciales de json
 contenido_json = st.secrets["file_json"]
 
-prueba = st.secrets['test']
+prueba = st.secrets["test"]
 st.write(prueba)
 
 #convertimos el dict en un JSON
