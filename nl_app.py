@@ -19,7 +19,6 @@ import tempfile
 
 import json
 st.write('hola')
-st.stop()
 prueba = st.secrets["test"]
 st.write(prueba)
 
