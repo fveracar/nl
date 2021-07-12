@@ -17,13 +17,21 @@ st.set_page_config(
 
 import tempfile
 
-uploaded_file = st.file_uploader("subir archivo .json", type="json")
+import json
 
-with tempfile.NamedTemporaryFile(mode='wb', delete=False) as fp:
-  fp.write(uploaded_file.getvalue())
+#creamos un dict con el contenido de las credenciales de json
+contenido_json = st.secrets['contenido_json']
+
+#convertimos el dict en un JSON
+uploaded_file = json.dumps(contenido_json)
+
+#guardamos el JSON en un archivo temporal para poder llamar al path donde se encuentra el archivo JSON en GOOGLE_APPLICATION_CREDENTIALS
+with tempfile.NamedTemporaryFile(mode='w', delete=False) as fp:
+  #fp.write(uploaded_file.getvalue())
+  fp.write(uploaded_file)
 try:
   os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = fp.name
-  st.write('Found', fp.name)
+  #st.write('Found', fp.name)
   with open(fp.name) as a:
     #st.write(a.read())
     client = language_v1.LanguageServiceClient()
