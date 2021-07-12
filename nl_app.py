@@ -25,7 +25,7 @@ try:
   os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = fp.name
   st.write('Found', fp.name)
   with open(fp.name) as a:
-    st.write(a.read())
+    #st.write(a.read())
     client = language_v1.LanguageServiceClient()
 finally:
   os.unlink(fp.name)
