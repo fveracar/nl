@@ -18,8 +18,6 @@ st.set_page_config(
 import tempfile
 
 import json
-st.write('hola')
-st.write(st.secrets["test"])
 
 #creamos un dict con el contenido de las credenciales de json
 contenido_json = st.secrets["file_json"]
