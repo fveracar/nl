@@ -19,6 +19,11 @@ import tempfile
 
 import json
 
+os.environ['GOOGLE_APPLICATION_CREDENTIALS']=st.secrets["file_json"]
+client = language_v1.LanguageServiceClient()
+st.write('credenciales leidas')
+st.stop()
+
 #creamos un dict con el contenido de las credenciales de json
 #contenido_json = st.secrets["file_json"]
 
