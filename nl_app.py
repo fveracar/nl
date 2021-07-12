@@ -32,7 +32,6 @@ contenido_json = {
   "auth_provider_x509_cert_url": st.secrets["auth_provider_x509_cert_url"],
   "client_x509_cert_url": st.secrets["auth_provider_x509_cert_url"]
 }
-#contenido_json = st.secrets["file_json"]
 
 #convertimos el dict en un JSON
 uploaded_file = json.dumps(contenido_json)
@@ -57,8 +56,6 @@ url_input = st.text_input('url para obtener Entidades')
 
 if url_input == '':
  st.stop()
- 
-#url = "https://sevilla.abc.es/andalucia/sevi-contagios-disparados-marcan-inicio-quinta-covid-andalucia-202107081224_noticia.html" #@param {type:"string"}
 
 url = url_input
 
@@ -141,10 +138,7 @@ else:
 st.header('Texto noticia')
 st.write(texto)
 
-#obtenemos las entidades del texto
-#client = language_v1.LanguageServiceClient()
-
-# Available types: PLAIN_TEXT, HTML
+#Available types: PLAIN_TEXT, HTML
 type_ = enums.Document.Type.PLAIN_TEXT
 
 # Optional. If not specified, the language is automatically detected.
