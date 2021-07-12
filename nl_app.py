@@ -20,10 +20,22 @@ import tempfile
 import json
 
 #creamos un dict con el contenido de las credenciales de json
+contenido_json = {
+  "type": st.secrets["type"],
+  "project_id": st.secrets["project_id"],
+  "private_key_id": st.secrets["private_key_id"],
+  "private_key": st.secrets["private_key"],
+  "client_email": st.secrets["client_email"],
+  "client_id": st.secrets["client_id"],
+  "auth_uri": st.secrets["auth_uri"],
+  "token_uri": st.secrets["token_uri"],
+  "auth_provider_x509_cert_url": st.secrets["auth_provider_x509_cert_url"],
+  "client_x509_cert_url": st.secrets["auth_provider_x509_cert_url"]
+}
 #contenido_json = st.secrets["file_json"]
 
 #convertimos el dict en un JSON
-uploaded_file = json.dumps(st.secrets["file_json"])
+uploaded_file = json.dumps(contenido_json)
 
 #guardamos el JSON en un archivo temporal para poder llamar al path donde se encuentra el archivo JSON en GOOGLE_APPLICATION_CREDENTIALS
 with tempfile.NamedTemporaryFile(mode='w', delete=False) as fp:
