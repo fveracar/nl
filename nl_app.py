@@ -19,9 +19,8 @@ import tempfile
 
 import json
 st.write('hola')
-st.stop()
 st.write(st.secrets["test"])
-
+st.stop()
 #creamos un dict con el contenido de las credenciales de json
 contenido_json = st.secrets["file_json"]
 
