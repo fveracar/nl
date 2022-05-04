@@ -13,6 +13,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title='Entidades | Vocento',
+    layout = 'wide',
 )
 
 import tempfile
