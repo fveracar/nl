@@ -53,7 +53,7 @@ finally:
 import requests
 from requests_html import HTMLSession
 
-url_input = st.text_input('url para obtener Entidades')
+url_input = st.text_input('url para obtener Entidades, Sentimiento y Magnitud del sentimiento del texto')
 
 if url_input == '':
  st.stop()
